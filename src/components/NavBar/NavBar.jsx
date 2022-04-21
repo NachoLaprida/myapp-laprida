@@ -1,7 +1,9 @@
 import React from 'react';
 import './NavBar.css'
-import cart from './../../images/shopping-cart.png'
+import CartWidget from '../CartWidget';
+
 import logo from './../../images/logo-gamer.jpg'
+
 function NavBar(props) {
     return (
         <div className='navBar'>
@@ -15,7 +17,7 @@ function NavBar(props) {
                 <li><a href=''>Galeria</a></li>
             </ul>
             <a href="">
-                <img src={cart} className="cart-image" alt="logo" />    
+                <CartWidget />    
             </a>
             
 
