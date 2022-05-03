@@ -2,6 +2,7 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 /* import Button from './components/Button';
 function handleClick(numero) {
   console.log('click' + numero)
@@ -9,7 +10,7 @@ function handleClick(numero) {
 
 function App() {
   return (
-    <div className="App">
+    <>
       <NavBar />
       
       {/* <Button texto='esto es un boton' color='red'/>
@@ -23,9 +24,13 @@ function App() {
       </Button> */}
       
       <header className="App-header">
-        <ItemListContainer greeting='Hola Mundo'/>
+        <>
+          <ItemListContainer />
+          <ItemDetailContainer />
+        </>
+        
       </header>
-    </div>
+    </>
   );
 }
 

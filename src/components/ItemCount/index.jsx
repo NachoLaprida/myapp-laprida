@@ -23,14 +23,14 @@ const ItemCount = ({stock, initial}) => {
         }
     }
     return (
-        <div>ItemCount
-            <div className='d-flex mt3'>
-                <button className="btn btn-danger" onClick={onDecrease}>-</button>
-                <h3 className='px-3 mx-3'>{count}</h3>
-                <button className='btn btn-primary' onClick={onIncrease}>+</button>
+        <div className='item-count justify-content-center m-3 p-3'>
+            <div className='d-flex justify-content-around p-3 border'>
+                <button className="btn btn-secondary btn-lg btn-block" onClick={onDecrease}>-</button>
+                <h3 className='px-3 mx-3 '>{count} </h3>
+                <button className='btn btn-secondary' onClick={onIncrease}>+</button>
             </div>
-            <div>
-                <button className='btn btn-primary' onClick={onAdd}>Agregar al Carrito</button>
+            <div className='d-flex justify-content-center p-2'>
+                <button className='btn btn-primary btn-lg btn-block' onClick={onAdd}>Agregar al Carrito</button>
             </div>
         </div>
     )
