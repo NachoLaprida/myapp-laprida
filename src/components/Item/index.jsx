@@ -12,7 +12,7 @@ function Item ({item}) {
                     <p className="card-text">${item.price}</p>
                     <p className="card-text">{item.size}</p>
                     <Link to={'/item/' + item.id}><button className='btn btn-secondary'>Ver Detalle</button></Link>
-                    {/* ARREGLAR ESTE LINK PORQUE ME TRAE UN UNDEFINED Y SIEMPRE TRAE EL MISMO PRODUCT */}
+                    
                 </div>
             </div>           
         </>
