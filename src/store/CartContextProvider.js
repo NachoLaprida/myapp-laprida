@@ -4,9 +4,9 @@ import { createContext, useState } from "react";
 const CartContext = createContext({
     products: [],
     addProduct: () => {},
+    removeProduct: () => {},
     isInCart: () => {},
     emptyCart: () => {},
-    deleteById: () => {},
     /* unitPerProducts: () => {},
     removeOneUnite: () => {}, */
     totalCount: () => {},
@@ -17,17 +17,26 @@ export const CartContextProvider = ({ children }) => {
     const [productsList, setProductList] = useState([])
     
     const addProduct = (product) => {
+        const cartItemPush = productsList.findIndex(item => item.id === product.id)
+        if(cartItemPush !== -1) {
+            setProductList(productsList.map(p => p.id === product.id ? {...p, quantity: p.quantity + product.quantity} : p))
+        } else{        
             setProductList([product, ...productsList])
-        
+        }
+    }
+    const removeProduct = (id) => {
+        const indexToRemove = productsList.findIndex(item => item.id === id);
+        if (productsList[indexToRemove].quantity === 1) {
+            setProductList(productsList.filter(i => i.id !== id))
+        } else {
+            setProductList(productsList.map(p => p.id === id ? {...p, quantity: p.quantity - 1} : p));
+        }
     }
     const isInCart = (id) => {
         return productsList.some((item) => item.id === id)
     }
     const emptyCart = () => {
         setProductList([])
-    }
-    const deleteById = (id) => {
-        setProductList(productsList.filter((item) => item.id !== id))
     }
     /* const unitsPerProduct = (id) => {
         const foundInCart = productsList.find((item) => item.id === id)
@@ -60,9 +69,9 @@ export const CartContextProvider = ({ children }) => {
         <CartContext.Provider value={{
             products: productsList,
             addProduct: addProduct,
+            removeProduct: removeProduct,
             isInCart: isInCart,
             emptyCart: emptyCart,
-            deleteById: deleteById,
             /* unitPerProducts: unitsPerProduct,
             removeOneUnite: removeOneUnite, */
             totalCount: totalCount,

@@ -1,5 +1,25 @@
+
+.cartWidget .count{
+    bottom: 20px;
+    background-color: white;
+    border-radius: 100%;
+    padding: 3px;
+    text-decoration: none;
+}
+.count a{
+    text-decoration: none;
+}
+.count{
+    left: 90%; 
+    position: relative;
+    color: red;
+    padding: 10px;
+    text-decoration: none;
+    
+}
 .cart-image{
     width: 50px;
     height: 50px;
-    justify-content: center;
 }
+
+

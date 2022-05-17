@@ -11,8 +11,8 @@ function ItemDetail({item}) {
     const cartContextUse = useContext(CartContext)
     function addHandler(quantityToAdd) {
         //setQuantityOfProducts(quantityToAdd);
-        item.quantity = quantityToAdd
-        cartContextUse.addProduct(item)
+        /* item.quantity = quantityToAdd */
+        cartContextUse.addProduct({quantity: quantityToAdd, ...item})
         
     }
     
@@ -35,12 +35,9 @@ function ItemDetail({item}) {
                     </div>
                 </div>
                 <div className='d-flex justify-content-around p-5'>
+                    <button className='btn btn-success' onClick={() => console.log(cartContextUse.products)} >Imprimir carrito</button>
                     <button className='btn btn-success' onClick={() => console.log(cartContextUse.isInCart(item.id))} >Is in Cart</button>
-                    <button className='btn btn-success' onClick={() => cartContextUse.deleteById(item.id)} >Remove Item By Id</button>
-                    {/* <button className='btn btn-success' onClick={() => console.log(cartContextUse.unitPerProducts(item.id))} >Mostrar Carrito</button> */}
-                    {/* <button className='btn btn-success' onClick={() => console.log(cartContextUse.removeOneUnite(item.id))} >Quitar</button> */}
-                    
-                    
+                    {/* <button className='btn btn-success' onClick={() => cartContextUse.deleteById(item.id)} >Remove Item By Id</button> */}
                 </div>
                 
             </div>

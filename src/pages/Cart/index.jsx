@@ -1,4 +1,6 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
+import CartItem from '../../components/CartItem'
 import CartContext from '../../store/CartContextProvider'
 
 
@@ -6,10 +8,21 @@ const Cart = () => {
     const cartContextUse = useContext(CartContext)
     return (
         <div>
-            <h1>Precio Total: ${cartContextUse.totalPrice()} </h1>
-            <h1>Total count {cartContextUse.totalCount()}</h1>
-
-            <button className='btn btn-danger' onClick={() => cartContextUse.emptyCart()} >Clear</button>
+            {cartContextUse.products.map(p => <CartItem item={p} key={p.id}/>)}
+            {cartContextUse.products.length !== 0 ?
+                <div>
+                    
+                    {/* <p>Producto: {cartContextUse.p}</p> */}
+                    <p>Precio Total: ${cartContextUse.totalPrice()}</p>
+                    <p>Total de Unidades en el Carrito: {cartContextUse.totalCount()}</p>
+                    {/* <button className='btn btn-danger' onClick={() => cartContextUse.removeProduct(item.id)}>Quitar</button> */}
+                    {<button className='btn btn-danger' onClick={() => cartContextUse.emptyCart()}>Vaciar carrito</button>}
+                </div> :
+                    <>
+                        <h2>No hay productos en el carrito</h2>
+                        <Link to='/'><button className='btn btn-primary'>Ir al inicio</button></Link>
+                    </>
+            }
         </div>
     )
 }
