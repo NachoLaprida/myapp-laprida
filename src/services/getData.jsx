@@ -5,7 +5,7 @@ const data = [
         title: "Alimento Eukanuba para perro Adulto Raza Grande", 
         price: 7400, 
         stock: 10,
-        category: 'grande',
+        category: 'grandes',
         size: "15kg", 
         imageUrl: "https://nanolog.vteximg.com.br/arquivos/ids/160816-1000-1000/10134637.jpg?v=636827358548130000"
     },

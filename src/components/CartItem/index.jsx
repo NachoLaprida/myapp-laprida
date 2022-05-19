@@ -12,7 +12,7 @@ const CartItem = ({item}) => {
             
             <p>Producto: {item.title}</p>
             <p>Unidades: {item.quantity}</p>
-            {/* <button className='btn btn-success' onClick={() => cartContextUse.addProduct(item.id)} >Agregar</button> */}
+            <button className='btn btn-success' onClick={() => cartContextUse.addProduct({...item})} >Agregar</button>
             <button className='btn btn-danger' onClick={() => cartContextUse.removeProduct(item.id)} >Quitar</button>
         </div>
         
