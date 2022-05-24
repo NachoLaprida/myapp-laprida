@@ -30,7 +30,7 @@ function ItemDetail({item}) {
                     <div className="count-container">
                     <ItemCount initial={1} stock={item.stock} onAdd={addHandler}/>
                         {cartContextUse.products.length &&
-                            <Link to='/cart'><button onClick={console.log(cartContextUse)} className='btn btn-primary p-2'>Finalizar compra { quantityOfProducts } productos</button></Link>
+                            <Link to='/cart'><button onClick={() => console.log(cartContextUse)} className='btn btn-primary p-2'>Finalizar compra { quantityOfProducts } productos</button></Link>
                         }
                     </div>
                 </div>
