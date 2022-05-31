@@ -5,10 +5,10 @@ import React, { useState, useEffect } from 'react'
 import { useParams} from 'react-router-dom'
 /* import data from '../../services/getData'; */
 import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore'
+import Spinner from '../../components/Spinner'
 
 function getProducts(category) {
     const db = getFirestore()
-
     const itemsCollection = collection(db, 'Items')
 
     const q = category && query(
@@ -35,6 +35,7 @@ function getProducts(category) {
 
 function ItemListContainer() {
     const [products, setProducts] = useState([]);
+    const [load, setLoad]= useState(true)
     const { categoryId } = useParams();
     useEffect(() => {
 /*         getDocs(itemsCollection)
@@ -49,10 +50,15 @@ function ItemListContainer() {
         
         getProducts(categoryId)
             .then(snapshot => {
+                setLoad(true)
                 setProducts(snapshot.docs.map( doc => {
                     return { ...doc.data(), id: doc.id }
+                    
                 }));
+                
+                setLoad(false)
             })
+            
             .catch(err => {
                 console.log(err);
                 alert('Ocurrio un error, revisar la consola!');
@@ -60,9 +66,15 @@ function ItemListContainer() {
     }, [categoryId]);
 
     return (
-        <div className='list-item-container'>
-            <ItemList items={products} />
-        </div>
+        <>
+            {load ? <Spinner /> :
+                <div>
+                    <div className='list-item-container'>
+                        <ItemList items={products} />
+                    </div>
+                </div>
+            }
+        </>
     )
 }
 export default ItemListContainer
