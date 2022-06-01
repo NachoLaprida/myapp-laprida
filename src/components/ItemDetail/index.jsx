@@ -29,7 +29,7 @@ function ItemDetail({item}) {
                     <p className='text-danger'>Precio: ${item?.price}</p>
                     <div className="count-container">
                     <ItemCount initial={1} stock={item.stock} onAdd={addHandler}/>
-                        {cartContextUse.products.length &&
+                        {cartContextUse.products.length > 0 &&
                             <Link to='/cart'><button onClick={() => console.log(cartContextUse)} className='btn btn-primary p-2'>Finalizar compra { quantityOfProducts } productos</button></Link>
                         }
                     </div>
