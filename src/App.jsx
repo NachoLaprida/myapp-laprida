@@ -6,6 +6,7 @@ import ItemDetailContainer from './pages/ItemDetailContainer';
 import { Routes, Route} from 'react-router-dom'
 import Cart from './pages/Cart';
 import Checkout from './components/Checkout';
+import Footer from './components/Footer';
 /* import Button from './components/Button';
 function handleClick(numero) {
   console.log('click' + numero)
@@ -32,6 +33,7 @@ function App() {
           <p>Esto es un children</p>
         </Button> */} 
       </Routes>
+      <Footer />
 
     </div>
   );

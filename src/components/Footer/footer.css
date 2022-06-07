@@ -1,0 +1,21 @@
+.footer{
+    background-color: black;
+    color: white;
+}
+
+i{
+    color: yellow;
+}
+
+.box li a{
+    text-decoration: none;
+    color: white;
+}
+.box li a:hover{
+    color: grey;
+    border-bottom: solid 2px grey ;
+}
+li{
+    list-style: none;
+    
+}

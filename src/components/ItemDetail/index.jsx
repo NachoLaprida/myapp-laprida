@@ -26,6 +26,10 @@ function ItemDetail({item}) {
             <div className="right">
                 <div className="info-container">
                     <h2>{item?.title}</h2>
+                    <div className="desc">
+                        <h3>Descripción:</h3>
+                        <p>ipssum asdasdasdkajshdkjashdas</p>
+                    </div>
                     <p className='text-danger'>Precio: ${item?.price}</p>
                     <div className="count-container">
                     <ItemCount initial={1} stock={item.stock} onAdd={addHandler}/>

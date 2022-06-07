@@ -20,9 +20,6 @@ export const CartContextProvider = ({ children }) => {
         const cartItemPush = productsList.findIndex(item => item.id === product.id)
         if(cartItemPush !== -1) {
             setProductList(productsList.map(p => p.id === product.id ? {...p, quantity: p.quantity + 1} : p))
-            /* let nacholi = productsList[cartItemPush]
-            nacholi.quantity = nacholi.quantity + product.quantity 
-            setProductList(productsList) */
         } else{        
             setProductList([product, ...productsList])
         }

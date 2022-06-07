@@ -68,10 +68,8 @@ function ItemListContainer() {
     return (
         <>
             {load ? <Spinner /> :
-                <div>
-                    <div className='list-item-container'>
-                        <ItemList items={products} />
-                    </div>
+                <div className='list-item-container'>
+                    <ItemList items={products} />
                 </div>
             }
         </>

@@ -1,0 +1,22 @@
+.Cart{
+    text-align: center;
+    min-height: 100vh;
+    padding: 30px;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px;
+}
+.botones .nac{
+    margin: 10px;
+}
+
+.montoFinal{
+    font-size: 30px;
+}
+
+
+

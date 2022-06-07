@@ -3,6 +3,7 @@ import CartContext from '../../store/CartContextProvider'
 import { collection, addDoc, getFirestore } from 'firebase/firestore'
 import Spinner from '../Spinner'
 import { Link } from 'react-router-dom'
+import './checkout.css'
 
 
 
@@ -59,51 +60,52 @@ const Checkout = () => {
 
     }
     return (
-        <>
-            <h1>Finalizando compra</h1>
-            <br />
-            { load ? <Spinner /> :
-                (!orderID && <div>
-                    <h4>Completar Datos</h4>
-                    <br />
-                    <form onSubmit={handleSubmit}>
-                        <input type="text" name='Nombre' placeholder='Nombre'
-                        value={Nombre}
-                        onChange={handleInputChange}
-                        required
-                        />
-                        <br />
-                        <input type="email" name='Email' placeholder='Email'
-                        value={Email}
-                        onChange={handleInputChange}
-                        required />
-                        
-                        <br />
-                        <input type="number" name='Telefono' placeholder='Telefono'
-                        value={Telefono}
-                        onChange={handleInputChange}
-                        required />
-                        <br />
-                        <input type="submit" value="Finalizar Compra" className='btn btn-success'
-                        />
-                    </form>
-                </div>)
-            }
-
-            <div>
+        <div className='parte-final'>
+            <h1 className='title-checkout'>Finalizando Compra</h1>
+            <hr />
+            <div className='fomulario'>
+                { load ? <Spinner /> :
+                    (!orderID && 
+                        <div className='container formContainer'>
+                            <h4>Completá tus Datos</h4>
+                            <form onSubmit={handleSubmit}>
+                                <input type="text" name='Nombre' placeholder='Nombre'
+                                value={Nombre}
+                                onChange={handleInputChange}
+                                required />
+                                <input type="email" name='Email' placeholder='Email'
+                                value={Email}
+                                onChange={handleInputChange}
+                                required />
+                                <input type="number" name='Telefono' placeholder='Telefono'
+                                value={Telefono}
+                                onChange={handleInputChange}
+                                required />
+                                <input type="submit" value="Finalizar Compra" className='btn btn-secondary'/>
+                            </form>
+                        </div>)
+                }
+            </div>
+            <div className='order-id'>
                 {
-                    orderID &&(
-                        <div>
-                            <h4>Compra finalizada con Exito</h4>
-                            <h4>{`Su código de compra es: ${orderID}`}</h4>
-                            <Link to="/"><h5>Realizar otra compra</h5></Link>
+                    orderID && 
+                    (
+                        <div className='end'>
+                            <h4 className='s'>Compra finalizada con Éxito</h4>
+                            <h4 className='s'>{`Tú código de compra es: ${orderID}`}</h4>
+                            <div className='gif s'>
+                                
+                            </div>
+                            <div className='s'>
+                                <Link to="/"><button className='btn btn-primary'>Realizar otra compra</button></Link>
+                            </div>
                         </div>
                     )
                 }
             </div>
             
             
-        </>
+        </div>
     )
 }
 

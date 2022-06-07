@@ -5,16 +5,20 @@ import './cartItem.css'
 const CartItem = ({item}) => {
     const cartContextUse = useContext(CartContext)
     return (
-        <div className='cartItem container'>
-            <div className="imagen">
+        <tr>
+            <td className="imagen">
                 <img src={ item.imageUrl} alt="" />
-            </div>
+            </td>
             
-            <p>Producto: {item.title}</p>
-            <p>Unidades: {item.quantity}</p>
-            <button className='btn btn-success' onClick={() => cartContextUse.addProduct({...item})} >Agregar</button>
-            <button className='btn btn-danger' onClick={() => cartContextUse.removeProduct(item.id)} >Quitar</button>
-        </div>
+            <td>{item.title}</td>
+            <td>{item.quantity}</td>
+            <td>Precio unitario ${item.price}</td>
+            <td className='buttons'>
+                <button className='btn btn-secondary' onClick={() => cartContextUse.addProduct({...item})} >+</button>
+                <button className='btn btn-secondary' onClick={() => cartContextUse.removeProduct(item.id)} >-</button>
+            </td>
+            
+        </tr>
         
     )
 }
