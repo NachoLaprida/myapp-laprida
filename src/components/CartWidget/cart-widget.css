@@ -8,18 +8,19 @@
 }
 .count a{
     text-decoration: none;
+    
 }
 .count{
     left: 90%; 
     position: relative;
     color: red;
     padding: 10px;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
 .cart-image{
     width: 50px;
     height: 50px;
+    
 }
 
 

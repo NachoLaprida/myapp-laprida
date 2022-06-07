@@ -90,14 +90,14 @@ const Checkout = () => {
                 {
                     orderID && 
                     (
-                        <div className='end'>
-                            <h4 className='s'>Compra finalizada con Éxito</h4>
-                            <h4 className='s'>{`Tú código de compra es: ${orderID}`}</h4>
+                        <div className='end rounded'>
+                            <h4 className='s message'>Compra finalizada con Éxito</h4>
+                            <h4 className='s message'>{`Tú código de compra es: ${orderID}`}</h4>
                             <div className='gif s'>
                                 
                             </div>
                             <div className='s'>
-                                <Link to="/"><button className='btn btn-primary'>Realizar otra compra</button></Link>
+                                <Link to="/"><button className='btn btn-secondary'>Realizar otra compra</button></Link>
                             </div>
                         </div>
                     )

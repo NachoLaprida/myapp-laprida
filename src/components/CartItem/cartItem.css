@@ -3,17 +3,6 @@
     width: 50px;
 }
 
-.cartItem{
-    background-color: #F0F5F9;
-    border-radius: 10%;
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0px 15px 15px rgba(0, 0, 0, .5);
-}
-
 .imagen{
     height: 150px;
     width: 150px;
@@ -23,11 +12,11 @@
     height: 100%;
 }
 
-.buttons{
+/* .buttons{
     width: 8%;
     display: flex;
     justify-content: space-between;
-}
+} */
 /* .buttons button{
     background-color: #52616B;
 } */

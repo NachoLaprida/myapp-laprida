@@ -6,10 +6,13 @@
     text-align: center;
     align-content: center;
     padding: 50px;
+    margin: 0 300px;
 }
 
 .title-checkout{
     margin: 20px;
+    -webkit-text-fill-color: #fff;
+        -webkit-text-stroke: black 2px; 
 }
 
 
@@ -32,14 +35,20 @@ form input{
     justify-content: center;
 
 }
-.end .s{
+.s{
     margin: 20px;
+    
 }
-
+.end{
+    border: solid 2px black;
+}
 .gif{
     background: url(https://i.gifer.com/fynK.gif);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     height: 400px;
+}
+.message{
+    font-weight: 700;
 }

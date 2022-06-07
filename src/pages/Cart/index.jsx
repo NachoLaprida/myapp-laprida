@@ -12,11 +12,12 @@ const Cart = () => {
             <table className='table'>
                 <thead>
                     <tr>
-                    <th scope="col"></th>
-                    <th scope="col">Producto</th>
-                    <th scope="col">Unidades</th>
-                    <th scope="col">Precio</th>
-                    <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Unidades</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Agregar</th>
+                        <th scope="col">Quitar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,7 +59,7 @@ const Cart = () => {
                 </div> :
                     <div style={{height: "100vh"}}>
                         <h2>No hay productos en el carrito</h2>
-                        <Link to='/'><button className='btn btn-primary'>Ir al inicio</button></Link>
+                        <Link to='/'><button className='btn btn-secondary'>Ir al inicio</button></Link>
                     </div>
             }
             

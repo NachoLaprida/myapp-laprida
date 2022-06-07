@@ -21,8 +21,8 @@ const Footer = () => {
                     <div className='legal col-lg-4 col-md-6 col-sm-12 p-2'>
                         <h2>Legal</h2>
                         <ul className='box'>
-                            <li><Link to='/'>Privacy Policy</Link></li>
-                            <li><Link to='/'>Terminos de Uso</Link></li>
+                            <li><Link to='/'>Pólitica de privacidad</Link></li>
+                            <li><Link to='/'>Términos de Uso</Link></li>
                         </ul>
                     </div>
 

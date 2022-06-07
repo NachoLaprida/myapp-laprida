@@ -5,3 +5,10 @@
     text-align: center;
 
 }
+
+.card-text{
+    font-weight: 500;
+}
+.body{
+    background-color: grey;
+}

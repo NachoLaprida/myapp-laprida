@@ -7,7 +7,7 @@ import './item-detail.css'
 
 
 function ItemDetail({item}) {
-    const [quantityOfProducts, setQuantityOfProducts] = useState(null);
+    const [quantityOfProducts/* , setQuantityOfProducts */] = useState(null);
     const cartContextUse = useContext(CartContext)
     function addHandler(quantityToAdd) {
         //setQuantityOfProducts(quantityToAdd);
@@ -27,20 +27,19 @@ function ItemDetail({item}) {
                 <div className="info-container">
                     <h2>{item?.title}</h2>
                     <div className="desc">
-                        <h3>Descripción:</h3>
-                        <p>ipssum asdasdasdkajshdkjashdas</p>
+                        <p className='description'>{item?.desc}</p>
                     </div>
-                    <p className='text-danger'>Precio: ${item?.price}</p>
+                    <h3 className='text-danger'>Precio: ${item?.price}</h3>
                     <div className="count-container">
                     <ItemCount initial={1} stock={item.stock} onAdd={addHandler}/>
                         {cartContextUse.products.length > 0 &&
-                            <Link to='/cart'><button onClick={() => console.log(cartContextUse)} className='btn btn-primary p-2'>Finalizar compra { quantityOfProducts } productos</button></Link>
+                            <Link to='/cart'><button onClick={() => console.log(cartContextUse)} className='btn btn-secondary p-2'>Finalizar compra { quantityOfProducts } productos</button></Link>
                         }
                     </div>
                 </div>
-                <div className='d-flex justify-content-around p-5'>
-                    <button className='btn btn-success' onClick={() => console.log(cartContextUse.products)} >Imprimir carrito</button>
-                    <button className='btn btn-success' onClick={() => console.log(cartContextUse.isInCart(item.id))} >Is in Cart</button>
+                <div className='d-flex justify-content-around p-5 '>
+                    {/* <button className='btn btn-success' onClick={() => console.log(cartContextUse.products)} >Imprimir carrito</button> */}
+                    <button className='btn btn-secondary' onClick={() => console.log(cartContextUse.isInCart(item.id))} >¿Esta en el Carrito?</button>
                     {/* <button className='btn btn-success' onClick={() => cartContextUse.deleteById(item.id)} >Remove Item By Id</button> */}
                 </div>
                 

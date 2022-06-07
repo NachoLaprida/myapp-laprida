@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import "./item-count.css"
 
 function ItemCount({ stock, initial, onAdd }) {
     const [count, setCount] = useState(initial);
@@ -23,7 +24,7 @@ function ItemCount({ stock, initial, onAdd }) {
                 <button className="btn btn-secondary btn-lg btn-block" onClick={() => onIncrease()}>+</button>
             </div>
             <div className='d-flex justify-content-center p-2'>
-                <button className='btn btn-primary btn-lg btn-block' onClick={() => onAdd(count )}>Agregar al Carrito</button>
+                <button className='btn btn-secondary btn-lg btn-block' onClick={() => onAdd(count )}>Agregar al Carrito</button>
             </div>
         </div>
     )
