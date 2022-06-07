@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/myapp-laprida/static/css/main.71a1f4ff.css",
+    "main.js": "/myapp-laprida/static/js/main.68bc8262.js",
+    "static/js/787.73bfdb4c.chunk.js": "/myapp-laprida/static/js/787.73bfdb4c.chunk.js",
+    "static/media/shopping-cart.png": "/myapp-laprida/static/media/shopping-cart.b8f7d146561bd82da858.png",
+    "static/media/logo-gamer.jpg": "/myapp-laprida/static/media/logo-gamer.e00c6ea358de5d723a52.jpg",
+    "index.html": "/myapp-laprida/index.html",
+    "main.71a1f4ff.css.map": "/myapp-laprida/static/css/main.71a1f4ff.css.map",
+    "main.68bc8262.js.map": "/myapp-laprida/static/js/main.68bc8262.js.map",
+    "787.73bfdb4c.chunk.js.map": "/myapp-laprida/static/js/787.73bfdb4c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.71a1f4ff.css",
+    "static/js/main.68bc8262.js"
+  ]
+}
