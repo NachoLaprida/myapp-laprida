@@ -1,9 +1,11 @@
 import React, { useContext } from 'react'
+
 import CartContext from '../../store/CartContextProvider'
 import './cartItem.css'
 
 const CartItem = ({item}) => {
     const cartContextUse = useContext(CartContext)
+    
     return (
         <tr className='menu'>
             <td className="imagen">

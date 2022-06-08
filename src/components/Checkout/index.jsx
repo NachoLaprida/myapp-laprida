@@ -1,8 +1,9 @@
 import React, { useContext, useState } from 'react'
-import CartContext from '../../store/CartContextProvider'
 import { collection, addDoc, getFirestore } from 'firebase/firestore'
-import Spinner from '../Spinner'
 import { Link } from 'react-router-dom'
+
+import CartContext from '../../store/CartContextProvider'
+import Spinner from '../Spinner'
 import './checkout.css'
 
 

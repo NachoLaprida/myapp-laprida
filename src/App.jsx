@@ -21,17 +21,7 @@ function App() {
         <Route path='/category/:categoryId' element={<ItemListContainer />}/>
         <Route path='/item/:id' element={<ItemDetailContainer />}/>
         <Route path='/cart' element={<Cart />}/>
-        <Route path='/checkout' element={<Checkout />}/>
-        
-        {/* <Button texto='esto es un boton' color='red'/>
-        <Button texto='esto es un boton2' color='green'/>
-        <Button texto='esto es un boton3' color='blue'/>
-        <Button  color='brown'>
-          <p>Esto es nacho</p>
-        </Button>
-        <Button color='grey'>
-          <p>Esto es un children</p>
-        </Button> */} 
+        <Route path='/checkout' element={<Checkout />}/> 
       </Routes>
       <Footer />
 

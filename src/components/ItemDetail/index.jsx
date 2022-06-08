@@ -1,5 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Link } from 'react-router-dom';
+
 import CartContext from '../../store/CartContextProvider';
 import ItemCount from '../ItemCount'
 import './item-detail.css'
@@ -7,13 +8,11 @@ import './item-detail.css'
 
 
 function ItemDetail({item}) {
-    const [quantityOfProducts/* , setQuantityOfProducts */] = useState(null);
+    const [quantityOfProducts] = useState(null);
     const cartContextUse = useContext(CartContext)
+    
     function addHandler(quantityToAdd) {
-        //setQuantityOfProducts(quantityToAdd);
-        /* item.quantity = quantityToAdd */
         cartContextUse.addProduct({quantity: quantityToAdd, ...item})
-        
     }
     
         return (

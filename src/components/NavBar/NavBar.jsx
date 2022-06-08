@@ -1,8 +1,9 @@
 import React from 'react';
-import './NavBar.css'
+import { NavLink } from 'react-router-dom';
+
 import CartWidget from '../CartWidget';
 import logo from './../../images/dog.png'
-import { NavLink } from 'react-router-dom';
+import './NavBar.css'
 
 function NavBar(props) {
 
