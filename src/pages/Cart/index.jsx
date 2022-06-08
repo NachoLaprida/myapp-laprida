@@ -33,8 +33,6 @@ const Cart = () => {
 
             {cartContextUse.products.length !== 0 ?
                 <div >
-                    
-                    {/* <p>Producto: {cartContextUse.p}</p> */}
                     <table className='table'>
                         <thead>
                             <tr>
@@ -43,9 +41,6 @@ const Cart = () => {
                         </thead>
                         
                     </table>
-                    
-                    {/* <h2>Total de Unidades en el Carrito: {cartContextUse.totalCount()}</h2> */}
-                    {/* <button className='btn btn-danger' onClick={() => cartContextUse.removeProduct(item.id)}>Quitar</button> */}
                     <div className='botones butns'>
                         <div className='nac'>
                             {<button className='btn btn-muted negative' onClick={() => cartContextUse.emptyCart()}>Vaciar carrito</button>}
@@ -53,7 +48,7 @@ const Cart = () => {
                         <div className='nac'>
                             <Link to='/checkout'>
                                 {<button className='btn btn-muted positive' to='/checkout'>Finalizar compra</button>}
-                            </Link>{/* chequear si el problema es esto */}
+                            </Link>
                         </div>
                         
                     </div>

@@ -37,9 +37,7 @@ function ItemDetail({item}) {
                     </div>
                 </div>
                 <div className='d-flex butns justify-content-around p-5 '>
-                    {/* <button className='btn btn-success' onClick={() => console.log(cartContextUse.products)} >Imprimir carrito</button> */}
                     <button className='btn btn-muted negative' onClick={() => console.log(cartContextUse.isInCart(item.id))} >¿Esta en el Carrito?</button>
-                    {/* <button className='btn btn-success' onClick={() => cartContextUse.deleteById(item.id)} >Remove Item By Id</button> */}
                 </div>
                 
             </div>
