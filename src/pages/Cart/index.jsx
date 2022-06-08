@@ -16,7 +16,8 @@ const Cart = () => {
                         <th scope="col"></th>
                         <th scope="col">Producto</th>
                         <th scope="col">Unidades</th>
-                        <th scope="col">Precio</th>
+                        <th scope="col">Precio Unitario</th>
+                        <th scope="col">Subtotal</th>
                         <th scope="col">Agregar</th>
                         <th scope="col">Quitar</th>
                     </tr>
@@ -45,22 +46,22 @@ const Cart = () => {
                     
                     {/* <h2>Total de Unidades en el Carrito: {cartContextUse.totalCount()}</h2> */}
                     {/* <button className='btn btn-danger' onClick={() => cartContextUse.removeProduct(item.id)}>Quitar</button> */}
-                    <div className='botones'>
+                    <div className='botones butns'>
                         <div className='nac'>
-                            {<button className='btn btn-secondary' onClick={() => cartContextUse.emptyCart()}>Vaciar carrito</button>}
+                            {<button className='btn btn-muted negative' onClick={() => cartContextUse.emptyCart()}>Vaciar carrito</button>}
                         </div>
                         <div className='nac'>
                             <Link to='/checkout'>
-                                {<button className='btn btn-secondary' to='/checkout'>Finalizar compra</button>}
+                                {<button className='btn btn-muted positive' to='/checkout'>Finalizar compra</button>}
                             </Link>{/* chequear si el problema es esto */}
                         </div>
                         
                     </div>
                     
                 </div> :
-                    <div style={{height: "100vh"}}>
+                    <div style={{height: "100vh"}} className='butns'>
                         <h2>No hay productos en el carrito</h2>
-                        <Link to='/'><button className='btn btn-secondary'>Ir al inicio</button></Link>
+                        <Link to='/'><button className='btn btn-muted positive'>Ir al inicio</button></Link>
                     </div>
             }
             

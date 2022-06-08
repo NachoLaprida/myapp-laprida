@@ -16,14 +16,15 @@ const CartContext = createContext({
 export const CartContextProvider = ({ children }) => {
     const [productsList, setProductList] = useState([])
     
-    const addProduct = (product) => {
+    const addProduct = (product, quantity = 1) => {
         const cartItemPush = productsList.findIndex(item => item.id === product.id)
         if(cartItemPush !== -1) {
-            setProductList(productsList.map(p => p.id === product.id ? {...p, quantity: p.quantity + 1} : p))
+            setProductList(productsList.map(p => p.id === product.id ? {...p, quantity: p.quantity + quantity} : p))
         } else{        
-            setProductList([product, ...productsList])
+            setProductList([...productsList, {...product, quantity: product.quantity || 1}  ])
         }
     }
+
     const removeProduct = (id) => {
         const indexToRemove = productsList.findIndex(item => item.id === id);
         if (productsList[indexToRemove].quantity === 1) {
@@ -33,7 +34,21 @@ export const CartContextProvider = ({ children }) => {
         }
     }
     const isInCart = (id) => {
-        return productsList.some((item) => item.id === id)
+        let isInCart = productsList.some((item) => item.id === id)
+        if(isInCart) {
+            swal({
+                title: "Está en el carrito",
+                icon:"success",
+                button:"Aceptar"
+        })
+        } else {
+            swal({
+                title:"No está en el carrito",
+                icon:"error",
+                button:"Aceptar"
+            })
+        }
+        return isInCart
     }
     
     const emptyCart = () => {

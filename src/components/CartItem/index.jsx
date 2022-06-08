@@ -13,12 +13,13 @@ const CartItem = ({item}) => {
             </td>
             <td>{item.title}</td>
             <td>{item.quantity}</td>
-            <td>Precio unitario ${item.price}</td>
-            <td>
-                <button className='btn btn-secondary' onClick={() => cartContextUse.addProduct({...item})} >+</button> 
+            <td>${item.price}</td>
+            <td>${item.price * item.quantity}</td>
+            <td className='butns'>
+                <button className='btn btn-muted positive' onClick={() => cartContextUse.addProduct(item)} >+</button> 
             </td>
-            <td>
-                <button className='btn btn-secondary' onClick={() => cartContextUse.removeProduct(item.id)} >-</button>
+            <td className='butns'>
+                <button className='btn btn-muted negative' onClick={() => cartContextUse.removeProduct(item.id)} >-</button>
             </td>
         </tr>
         

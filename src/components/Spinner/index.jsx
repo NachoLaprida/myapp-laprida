@@ -2,7 +2,6 @@ import React  from 'react'
 
 import { spinnerStyle } from './spinnerStyle.jsx'
 
-
 const Spinner = () => {
 
     return (

@@ -1,15 +1,31 @@
 .navBar{
     display: flex;
-    background-color: black;
+    background-color: #5FD068;
     justify-content: space-around;
     align-items: center;
+    
 }
-
+.navBar a .logo-nav:hover {
+    filter: grayscale(65%);
+    
+}
 .logo-nav{
     width: 80px;
     height: 80px;
     justify-content: center;
+    
+    
+    
 }
+.logo-cart{
+    text-decoration: none;
+    transition: transform .7s ease-in-out;
+}
+.logo-cart:hover{
+    transform: rotate(90deg);
+}
+
+
 
 
 .nav{
@@ -25,14 +41,16 @@
 .nav li a{
     padding: 20px;
     text-decoration: none;
-    color: red;
+    color: #F5DF99;
 }
 .nav-active{
-    border-bottom: solid 2px red ;
+    border-bottom: solid 2px #F5DF99 ;
 }
 
 .nav li a:hover{
-    color: white;
-    border-bottom: solid 2px white ;
+    color: #F6FBF4;
+    border-bottom: solid 2px #F6FBF4 ;
 }
+
+
 

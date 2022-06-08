@@ -9,3 +9,16 @@
 .card-text{
     font-weight: 500;
 }
+
+.butns .positive{
+    background-color: #5FD068;
+}
+.butns .positive:hover{
+    background-color: #4B8673;
+}
+.butns .negative{
+    background-color: #F5DF99;
+}
+.butns .negative:hover{
+    background-color: #F6FBF4;
+}

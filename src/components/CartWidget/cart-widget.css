@@ -13,7 +13,7 @@
 .count{
     left: 90%; 
     position: relative;
-    color: red;
+    color: #5FD068;
     padding: 10px;
     text-decoration: none;   
 }
@@ -22,5 +22,7 @@
     height: 50px;
     
 }
+
+
 
 

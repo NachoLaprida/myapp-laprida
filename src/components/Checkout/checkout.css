@@ -41,6 +41,7 @@ form input{
 }
 .end{
     border: solid 2px black;
+    background-color: #F5DF99;
 }
 .gif{
     background: url(https://i.gifer.com/fynK.gif);

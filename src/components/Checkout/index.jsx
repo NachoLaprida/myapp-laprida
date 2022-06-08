@@ -82,7 +82,8 @@ const Checkout = () => {
                                 value={Telefono}
                                 onChange={handleInputChange}
                                 required />
-                                <input type="submit" value="Finalizar Compra" className='btn btn-secondary'/>
+                                <div className="butns"><input type="submit" value="Finalizar Compra" className='btn btn-muted positive'/></div>
+                                
                             </form>
                         </div>)
                 }
@@ -97,8 +98,8 @@ const Checkout = () => {
                             <div className='gif s'>
                                 
                             </div>
-                            <div className='s'>
-                                <Link to="/"><button className='btn btn-secondary'>Realizar otra compra</button></Link>
+                            <div className='s butns'>
+                                <Link to="/"><button className='btn btn-muted positive'>Realizar otra compra</button></Link>
                             </div>
                         </div>
                     )

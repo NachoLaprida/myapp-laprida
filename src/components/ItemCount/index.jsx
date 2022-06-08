@@ -19,13 +19,13 @@ function ItemCount({ stock, initial, onAdd }) {
 
     return (
         <div className='item-count justify-content-center m-3 p-3'>
-            <div className='d-flex justify-content-around p-3 border'>
-                <button className='btn btn-secondary' onClick={() => onDecrease()}>-</button>
+            <div className='d-flex butns justify-content-around p-3 border'>
+                <button className='btn btn-muted negative' onClick={() => onDecrease()}>-</button>
                 <h3 className='px-3 mx-3 '>{count} </h3>
-                <button className="btn btn-secondary btn-lg btn-block" onClick={() => onIncrease()}>+</button>
+                <button className="btn btn-muted positive btn-lg btn-block" onClick={() => onIncrease()}>+</button>
             </div>
-            <div className='d-flex justify-content-center p-2'>
-                <button className='btn btn-secondary btn-lg btn-block' onClick={() => onAdd(count )}>Agregar al Carrito</button>
+            <div className='d-flex butns justify-content-center p-2'>
+                <button className='btn btn-muted positive btn-lg btn-block' onClick={() => onAdd(count )}>Agregar al Carrito</button>
             </div>
         </div>
     )

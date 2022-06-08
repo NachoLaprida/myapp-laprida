@@ -1,21 +1,24 @@
 .footer{
-    background-color: black;
+    background-color: #4B8673;
     color: white;
 }
 
-i{
-    color: yellow;
+.colores{
+    color: #F5DF99;
 }
 
 .box li a{
     text-decoration: none;
-    color: white;
+    color: #F5DF99;
 }
 .box li a:hover{
-    color: grey;
-    border-bottom: solid 2px grey ;
+    color: #F6FBF4;
+    border-bottom: solid 2px #F6FBF4 ;
 }
 li{
     list-style: none;
     
+}
+.col h2{
+    color: #F5DF99;
 }

@@ -16,8 +16,8 @@ function Item ({item}) {
                     <p className="card-text">${item.price}</p>
                     <p className="card-text">{item.size}</p>
                     <div className="butns d-flex justify-content-around">
-                        <button className='btn btn-secondary' onClick={() => cartContextUse.addProduct({...item})} >Agregar</button>
-                        <Link to={'/item/' + item.id}><button className='btn btn-secondary'>Ver Detalle</button></Link>
+                        <button className='btn btn-muted positive' onClick={() => cartContextUse.addProduct(item)} >Agregar</button>
+                        <Link to={'/item/' + item.id}><button className='btn btn-muted negative'>Ver Detalle</button></Link>
                     </div>
                     
                 </div>
